@@ -1,0 +1,108 @@
+PROJECT: Adaptive Vehicle Torque Control System
+
+--------------------------------------------------
+SCENARIO 1: DRY CONDITION (NO YAW)
+--------------------------------------------------
+Inputs:
+Torque = 100 Nm
+Friction = 0.9 (Dry)
+Yaw Rate = 0
+Wheel Speed ≈ Vehicle Speed
+
+Observation:
+- Slip ratio is very low
+- No yaw (vehicle is stable)
+- High friction (good road grip)
+
+Result:
+Final Torque = 100 Nm
+
+Conclusion:
+No torque reduction is applied because the vehicle is in a stable condition.
+
+--------------------------------------------------
+SCENARIO 2: DRY + YAW CONDITION
+--------------------------------------------------
+Inputs:
+Torque = 100 Nm
+Friction = 0.9 (Dry)
+Yaw Rate = 0.5 (> threshold)
+Wheel Speed ≈ Vehicle Speed
+
+Observation:
+- Slip is low
+- Yaw rate is high (vehicle turning/unstable)
+
+Result:
+Final Torque ≈ 90 Nm
+
+Conclusion:
+Torque is reduced to maintain stability during turning even though the road is dry.
+
+--------------------------------------------------
+SCENARIO 3: WET CONDITION
+--------------------------------------------------
+Inputs:
+Torque = 100 Nm
+Friction = 0.4 (Wet)
+Yaw Rate = 0
+Wheel Speed slightly higher than Vehicle Speed
+
+Observation:
+- Low friction (poor grip)
+- Moderate slip possible
+
+Result:
+Final Torque ≈ 80–90 Nm
+
+Conclusion:
+Torque is reduced to prevent wheel slip on wet roads.
+
+--------------------------------------------------
+SCENARIO 4: SLIP CONDITION
+--------------------------------------------------
+Inputs:
+Torque = 100 Nm
+Friction = 0.8
+Yaw Rate = 0.1
+Wheel Speed >> Vehicle Speed
+
+Observation:
+- Slip ratio is high (> threshold)
+- Risk of wheel spinning
+
+Result:
+Final Torque ≈ 75–85 Nm
+
+Conclusion:
+Torque is reduced to control excessive slip.
+
+--------------------------------------------------
+SCENARIO 5: WET + YAW (CRITICAL CONDITION)
+--------------------------------------------------
+Inputs:
+Torque = 100 Nm
+Friction = 0.3 (Wet)
+Yaw Rate = 0.6 (High)
+Wheel Speed >> Vehicle Speed
+
+Observation:
+- Low friction
+- High yaw instability
+- High slip
+
+Result:
+Final Torque ≈ 60–70 Nm
+
+Conclusion:
+Maximum torque reduction is applied to ensure safety in highly unstable conditions.
+
+--------------------------------------------------
+OVERALL SUMMARY
+--------------------------------------------------
+- Stable conditions → No torque reduction
+- Yaw detected → Moderate reduction
+- Wet/slip conditions → Higher reduction
+- Combined conditions → Maximum reduction
+
+The system adapts torque dynamically to maintain vehicle stability.
