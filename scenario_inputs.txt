@@ -1,0 +1,29 @@
+
+
+--------------------------------------------------
+SCENARIO 1: DRY CONDITION (NO YAW)
+--------------------------------------------------
+Torque = 100 Nm
+Friction = 0.9
+Yaw Rate = 0
+Vehicle Speed = 20 m/s
+Wheel Speed = 20.2 m/s
+
+--------------------------------------------------
+SCENARIO 2: DRY + YAW CONDITION
+--------------------------------------------------
+Torque = 100 Nm
+Friction = 0.9
+Yaw Rate = 0.5
+Vehicle Speed = 20 m/s
+Wheel Speed = 20.5 m/s
+
+--------------------------------------------------
+SCENARIO 3: WET CONDITION
+--------------------------------------------------
+Torque = 100 Nm
+Friction = 0.4
+Yaw Rate = 0
+Vehicle Speed = 20 m/s
+Wheel Speed = 21 m/s
+
