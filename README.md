@@ -20,9 +20,5 @@ This project implements a simple vehicle torque control system using Simulink to
 - Input values
 - Output graph
 - Explanation
-
-scenario 1.png
-
-
 - Simulink
 
