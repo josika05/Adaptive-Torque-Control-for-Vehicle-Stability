@@ -1,4 +1,4 @@
- ##Vehicle Torque Control System (Simulink)
+ ## Vehicle Torque Control System (Simulink)
 This project implements a simple vehicle torque control system using Simulink to improve stability under different driving conditions.
 
 - Uses slip ratio, yaw rate, and friction
@@ -10,15 +10,16 @@ This project implements a simple vehicle torque control system using Simulink to
 - Wet road → Reduce torque  
 - Else → Maintain torque  
 
-##Scenarios
+## Scenarios
 
 - Dry Condition (No Yaw)
 - Dry + Yaw Condition
 - Wet Condition
 
-##Each scenario includes:
+## Each scenario includes:
 - Input values
 - Output graph
 - Explanation
 - Simulink
+  
 
